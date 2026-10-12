@@ -1,0 +1,58 @@
+{
+  "id": "GroupTechnician",
+  "title": "سألت في الجروب؟",
+  "lines": [
+    {
+      "id": "s1cap",
+      "speaker": "none",
+      "text": "سألت في الجروب؟",
+      "at": 0.2,
+      "dur": 2.3,
+      "noCaption": true
+    },
+    {
+      "id": "woman1",
+      "speaker": "woman",
+      "text": "حضرتك جاي من الجروب؟",
+      "at": 5.0
+    },
+    {
+      "id": "tech1",
+      "speaker": "man",
+      "text": "آه، بس الشغلانة دي كبيرة يا مدام",
+      "at": 6.5
+    },
+    {
+      "id": "operator",
+      "speaker": "operator",
+      "text": "الرقم الذي طلبته غير متاح",
+      "at": 11.5,
+      "noCaption": true
+    },
+    {
+      "id": "s3cap",
+      "speaker": "none",
+      "text": "لا ضمان، ولا تعرف هو مين",
+      "at": 12.2,
+      "dur": 2.6
+    },
+    {
+      "id": "m1",
+      "speaker": "man",
+      "text": "مع صلحلي: الفني متسجل ببطاقته.",
+      "at": 15.5
+    },
+    {
+      "id": "m2",
+      "speaker": "man",
+      "text": "بيوصلك لحد خمس عروض وتختار السعر قبل ما ييجي.",
+      "at": 18.3
+    },
+    {
+      "id": "m3",
+      "speaker": "man",
+      "text": "ولو حصل حاجة، ضمان أربعتاشر يوم وزيارة مجانية.",
+      "at": 21.7
+    }
+  ]
+}

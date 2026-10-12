@@ -7,7 +7,7 @@ import {Line} from '../lib/timing';
 export const Caption: React.FC<{lines: Line[]; bottom?: number}> = ({lines, bottom = 300}) => {
   const frame = useCurrentFrame();
   const {fps} = useVideoConfig();
-  const line = lines.find((l) => frame >= l.from - 2 && frame <= l.to + 8);
+  const line = lines.find((l) => !l.noCaption && frame >= l.from - 2 && frame <= l.to + 8);
   if (!line) return null;
 
   const enter = interpolate(frame, [line.from - 2, line.from + 4], [0, 1], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'});

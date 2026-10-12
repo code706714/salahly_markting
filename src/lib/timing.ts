@@ -1,15 +1,21 @@
 import {FPS} from './theme';
 
-export type Speaker = 'man' | 'woman';
+// man/woman = شخصيات بتتكلم (الفم بيتحرك). operator = صوت رسالة آلية (مفيش شخصية). none = ترجمة من غير صوت.
+export type Speaker = 'man' | 'woman' | 'operator' | 'none';
 
 export type RawWord = {text: string; start: number; end: number};
 export type RawLine = {
   id: string;
   speaker: Speaker;
   text: string;
-  file: string;
+  /** null = سطر صامت (ترجمة بس) */
+  file: string | null;
   duration: number;
   words: RawWord[];
+  /** بداية السطر بالثواني على التايم لاين (لو مش موجودة، السطر بيجي بعد اللي قبله) */
+  at?: number;
+  /** ما تعرضش الترجمة السفلية للسطر ده */
+  noCaption?: boolean;
 };
 export type Timing = {video: string; synthetic?: boolean; lines: RawLine[]};
 
@@ -28,10 +34,10 @@ const TAIL = 40; // فريمات بعد آخر سطر
 export const layoutLines = (timing: Timing): Line[] => {
   let cursor = LEAD_IN;
   return timing.lines.map((l) => {
-    const from = cursor;
+    const from = l.at !== undefined ? Math.round(l.at * FPS) : cursor;
     const frames = Math.max(1, Math.ceil(l.duration * FPS));
     const to = from + frames;
-    cursor = to + GAP;
+    cursor = Math.max(cursor, to + GAP);
     return {
       ...l,
       from,

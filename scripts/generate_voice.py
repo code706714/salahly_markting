@@ -38,7 +38,13 @@ AUDIO_DIR = ROOT / "assets" / "audio"
 VOICES = {
     "man": "ar-EG-ShakirNeural",
     "woman": "ar-EG-SalmaNeural",
+    "operator": "ar-SA-ZariyahNeural",  # رسالة آلية (فصحى)
 }
+
+
+def is_silent(line: dict) -> bool:
+    """سطر ترجمة بس (من غير صوت): speaker=none أو silent=true، ومدته من الحقل dur."""
+    return line["speaker"] == "none" or bool(line.get("silent"))
 TICKS_PER_SECOND = 10_000_000  # edge-tts بيرجّع الوقت بوحدات 100ns
 
 
@@ -195,22 +201,26 @@ async def process_video(video_dir: Path, offline: bool, rate: str, provider: str
     out_dir.mkdir(parents=True, exist_ok=True)
 
     if provider == "local" and not offline:
-        missing = [l for l in script["lines"] if not find_local_audio(out_dir, l["id"])]
+        missing = [l for l in script["lines"] if not is_silent(l) and not find_local_audio(out_dir, l["id"])]
         if missing:
             print(f"!! [{vid}] ناقص {len(missing)} ملف صوت. حطهم في {out_dir.relative_to(ROOT)} (mp3 أو wav) بالأسماء دي:")
             for l in missing:
-                who = "راجل" if l["speaker"] == "man" else "ست"
+                who = {"man": "راجل", "woman": "ست", "operator": "رسالة آلية"}.get(l["speaker"], l["speaker"])
                 print(f"   {l['id']}.mp3   ({who})   {l['text']}")
             sys.exit(1)
 
     lines_out = []
     for line in script["lines"]:
         speaker = line["speaker"]
-        if speaker not in VOICES:
-            sys.exit(f"[{vid}] speaker غلط في السطر {line['id']}: {speaker} (man أو woman)")
+        if speaker not in VOICES and speaker != "none":
+            sys.exit(f"[{vid}] speaker غلط في السطر {line['id']}: {speaker} (man / woman / operator / none)")
         out_path = out_dir / f"{line['id']}.mp3"
         file_rel = f"audio/{vid}/{line['id']}.mp3"
-        if offline:
+        if is_silent(line):
+            file_rel = None
+            duration = float(line.get("dur", 2.0))
+            words = spread_words(line["text"], duration)
+        elif offline:
             duration, words = synth_offline(line["text"], out_path)
         elif provider == "local":
             found = find_local_audio(out_dir, line["id"])
@@ -228,14 +238,20 @@ async def process_video(video_dir: Path, offline: bool, rate: str, provider: str
                     sys.exit(EDGE_BROKEN_HELP)
                 raise
         print(f"  [{vid}] {line['id']:<10} {speaker:<6} {duration:5.2f}s  {line['text']}")
-        lines_out.append({
+        entry = {
             "id": line["id"],
             "speaker": speaker,
             "text": line["text"],
             "file": file_rel,
             "duration": round(duration, 3),
             "words": words,
-        })
+        }
+        # توقيت مطلق بالثواني + إخفاء الترجمة السفلية (اختياريين)
+        if "at" in line:
+            entry["at"] = line["at"]
+        if line.get("noCaption"):
+            entry["noCaption"] = True
+        lines_out.append(entry)
 
     timing = {"video": vid, "synthetic": offline, "lines": lines_out}
     (video_dir / "timing.json").write_text(
@@ -268,8 +284,9 @@ async def main():
             print(f"\n== {d.name}   ->  assets/audio/{d.name}/")
             for l in sc["lines"]:
                 total += 1
-                who = "راجل" if l["speaker"] == "man" else "ست  "
-                print(f"  {l['id']:<10}.mp3  [{who}]  {l['text']}")
+                who = {"man": "راجل", "woman": "ست  ", "operator": "آلي ", "none": "صامت"}.get(l["speaker"], l["speaker"])
+                tail = "  (ترجمة بس، من غير ملف صوت)" if is_silent(l) else ""
+                print(f"  {l['id']:<10}.mp3  [{who}]  {l['text']}{tail}")
         print(f"\nالمجموع: {total} جملة")
         return
     for d in dirs:

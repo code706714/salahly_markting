@@ -76,6 +76,34 @@ def ding(dur=1.1):
     return out
 
 
+def doorbell(dur=1.6):
+    """دينج دونج: نغمتين بيحلّوا بالتدريج."""
+    n = int(SR * dur)
+    out = [0.0] * n
+    for start, f in ((0.0, 659.3), (0.5, 523.3)):
+        for i in range(int(SR * 1.1)):
+            j = int(start * SR) + i
+            if j >= n:
+                break
+            t = i / SR
+            s_ = (math.sin(2 * math.pi * f * t) * 0.6 + math.sin(2 * math.pi * f * 2.0 * t) * 0.2
+                  + math.sin(2 * math.pi * f * 3.01 * t) * 0.08)
+            out[j] += s_ * math.exp(-t * 3.8) * min(1, t * 500)
+    return out
+
+
+def ring(dur=1.5):
+    """رنّة موبايل: نغمتين متقطعتين."""
+    n = int(SR * dur)
+    out = []
+    for i in range(n):
+        t = i / SR
+        on = (t % 0.75) < 0.4
+        env = (min(1, (t % 0.75) * 80) * min(1, (0.4 - (t % 0.75)) * 80)) if on else 0.0
+        out.append((math.sin(2 * math.pi * 440 * t) + math.sin(2 * math.pi * 480 * t)) * 0.5 * (0.6 + 0.4 * math.sin(2 * math.pi * 20 * t)) * max(0.0, env))
+    return out
+
+
 def music(dur=32.0, bpm=96):
     """لوب هادي: pad + arpeggio على سلّم بنتاتوني. بيتكرر في الفيديو."""
     n = int(SR * dur)
@@ -107,7 +135,7 @@ def main():
     args = ap.parse_args()
 
     SFX_DIR.mkdir(parents=True, exist_ok=True)
-    for name, fn in (("whoosh", whoosh), ("pop", pop), ("ding", ding)):
+    for name, fn in (("whoosh", whoosh), ("pop", pop), ("ding", ding), ("doorbell", doorbell), ("ring", ring)):
         write_wav(SFX_DIR / f"{name}.wav", fn())
         print("sfx:", SFX_DIR / f"{name}.wav")
 

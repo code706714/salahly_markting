@@ -1,0 +1,323 @@
+{
+  "video": "GroupTechnician",
+  "synthetic": false,
+  "lines": [
+    {
+      "id": "s1cap",
+      "speaker": "none",
+      "text": "سألت في الجروب؟",
+      "file": null,
+      "duration": 2.3,
+      "words": [
+        {
+          "text": "سألت",
+          "start": 0.0,
+          "end": 0.708
+        },
+        {
+          "text": "في",
+          "start": 0.708,
+          "end": 1.062
+        },
+        {
+          "text": "الجروب؟",
+          "start": 1.062,
+          "end": 2.3
+        }
+      ],
+      "at": 0.2,
+      "noCaption": true
+    },
+    {
+      "id": "woman1",
+      "speaker": "woman",
+      "text": "حضرتك جاي من الجروب؟",
+      "file": "audio/GroupTechnician/woman1.mp3",
+      "duration": 1.176,
+      "words": [
+        {
+          "text": "حضرتك",
+          "start": 0.0,
+          "end": 0.346
+        },
+        {
+          "text": "جاي",
+          "start": 0.346,
+          "end": 0.553
+        },
+        {
+          "text": "من",
+          "start": 0.553,
+          "end": 0.691
+        },
+        {
+          "text": "الجروب؟",
+          "start": 0.691,
+          "end": 1.176
+        }
+      ],
+      "at": 5.0
+    },
+    {
+      "id": "tech1",
+      "speaker": "man",
+      "text": "آه، بس الشغلانة دي كبيرة يا مدام",
+      "file": "audio/GroupTechnician/tech1.mp3",
+      "duration": 1.959,
+      "words": [
+        {
+          "text": "آه،",
+          "start": 0.0,
+          "end": 0.226
+        },
+        {
+          "text": "بس",
+          "start": 0.226,
+          "end": 0.377
+        },
+        {
+          "text": "الشغلانة",
+          "start": 0.377,
+          "end": 0.98
+        },
+        {
+          "text": "دي",
+          "start": 0.98,
+          "end": 1.13
+        },
+        {
+          "text": "كبيرة",
+          "start": 1.13,
+          "end": 1.507
+        },
+        {
+          "text": "يا",
+          "start": 1.507,
+          "end": 1.658
+        },
+        {
+          "text": "مدام",
+          "start": 1.658,
+          "end": 1.959
+        }
+      ],
+      "at": 6.5
+    },
+    {
+      "id": "operator",
+      "speaker": "operator",
+      "text": "الرقم الذي طلبته غير متاح",
+      "file": "audio/GroupTechnician/operator.mp3",
+      "duration": 3.448,
+      "words": [
+        {
+          "text": "الرقم",
+          "start": 0.0,
+          "end": 0.821
+        },
+        {
+          "text": "الذي",
+          "start": 0.821,
+          "end": 1.478
+        },
+        {
+          "text": "طلبته",
+          "start": 1.478,
+          "end": 2.299
+        },
+        {
+          "text": "غير",
+          "start": 2.299,
+          "end": 2.791
+        },
+        {
+          "text": "متاح",
+          "start": 2.791,
+          "end": 3.448
+        }
+      ],
+      "at": 11.5,
+      "noCaption": true
+    },
+    {
+      "id": "s3cap",
+      "speaker": "none",
+      "text": "لا ضمان، ولا تعرف هو مين",
+      "file": null,
+      "duration": 2.6,
+      "words": [
+        {
+          "text": "لا",
+          "start": 0.0,
+          "end": 0.274
+        },
+        {
+          "text": "ضمان،",
+          "start": 0.274,
+          "end": 0.958
+        },
+        {
+          "text": "ولا",
+          "start": 0.958,
+          "end": 1.368
+        },
+        {
+          "text": "تعرف",
+          "start": 1.368,
+          "end": 1.916
+        },
+        {
+          "text": "هو",
+          "start": 1.916,
+          "end": 2.189
+        },
+        {
+          "text": "مين",
+          "start": 2.189,
+          "end": 2.6
+        }
+      ],
+      "at": 12.2
+    },
+    {
+      "id": "m1",
+      "speaker": "man",
+      "text": "مع صلحلي: الفني متسجل ببطاقته.",
+      "file": "audio/GroupTechnician/m1.mp3",
+      "duration": 2.403,
+      "words": [
+        {
+          "text": "مع",
+          "start": 0.0,
+          "end": 0.185
+        },
+        {
+          "text": "صلحلي:",
+          "start": 0.185,
+          "end": 0.739
+        },
+        {
+          "text": "الفني",
+          "start": 0.739,
+          "end": 1.202
+        },
+        {
+          "text": "متسجل",
+          "start": 1.202,
+          "end": 1.664
+        },
+        {
+          "text": "ببطاقته.",
+          "start": 1.664,
+          "end": 2.403
+        }
+      ],
+      "at": 15.5
+    },
+    {
+      "id": "m2",
+      "speaker": "man",
+      "text": "بيوصلك لحد خمس عروض وتختار السعر قبل ما ييجي.",
+      "file": "audio/GroupTechnician/m2.mp3",
+      "duration": 2.978,
+      "words": [
+        {
+          "text": "بيوصلك",
+          "start": 0.0,
+          "end": 0.483
+        },
+        {
+          "text": "لحد",
+          "start": 0.483,
+          "end": 0.724
+        },
+        {
+          "text": "خمس",
+          "start": 0.724,
+          "end": 0.966
+        },
+        {
+          "text": "عروض",
+          "start": 0.966,
+          "end": 1.288
+        },
+        {
+          "text": "وتختار",
+          "start": 1.288,
+          "end": 1.771
+        },
+        {
+          "text": "السعر",
+          "start": 1.771,
+          "end": 2.173
+        },
+        {
+          "text": "قبل",
+          "start": 2.173,
+          "end": 2.415
+        },
+        {
+          "text": "ما",
+          "start": 2.415,
+          "end": 2.576
+        },
+        {
+          "text": "ييجي.",
+          "start": 2.576,
+          "end": 2.978
+        }
+      ],
+      "at": 18.3
+    },
+    {
+      "id": "m3",
+      "speaker": "man",
+      "text": "ولو حصل حاجة، ضمان أربعتاشر يوم وزيارة مجانية.",
+      "file": "audio/GroupTechnician/m3.mp3",
+      "duration": 2.978,
+      "words": [
+        {
+          "text": "ولو",
+          "start": 0.0,
+          "end": 0.229
+        },
+        {
+          "text": "حصل",
+          "start": 0.229,
+          "end": 0.458
+        },
+        {
+          "text": "حاجة،",
+          "start": 0.458,
+          "end": 0.84
+        },
+        {
+          "text": "ضمان",
+          "start": 0.84,
+          "end": 1.145
+        },
+        {
+          "text": "أربعتاشر",
+          "start": 1.145,
+          "end": 1.756
+        },
+        {
+          "text": "يوم",
+          "start": 1.756,
+          "end": 1.985
+        },
+        {
+          "text": "وزيارة",
+          "start": 1.985,
+          "end": 2.443
+        },
+        {
+          "text": "مجانية.",
+          "start": 2.443,
+          "end": 2.978
+        }
+      ],
+      "at": 21.7
+    }
+  ]
+}

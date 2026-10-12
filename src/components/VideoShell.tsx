@@ -6,12 +6,13 @@ import {LineAudio, LinesProvider, Music, Wipe} from '../lib/stage';
 import {Line, sceneStart} from '../lib/timing';
 
 /** غلاف الفيديو: الصوت + الموسيقى + الترجمة + الـ transitions. المشاهد (Scene) بتتحط children. */
-export const VideoShell: React.FC<{lines: Line[]; total: number; children: React.ReactNode}> = ({lines, total, children}) => (
+/** cuts: فريمات حدود المشاهد اللي يتحط عندها wipe (الافتراضي: بداية كل سطر ما عدا الأول). */
+export const VideoShell: React.FC<{lines: Line[]; total: number; cuts?: number[]; children: React.ReactNode}> = ({lines, total, cuts, children}) => (
   <LinesProvider lines={lines}>
     <AbsoluteFill style={{background: COLORS.background, direction: 'rtl', fontFamily: FONT}}>
       {children}
-      {lines.slice(1).map((_, i) => (
-        <Wipe key={i} at={sceneStart(lines, i + 1)} />
+      {(cuts ?? lines.slice(1).map((_, i) => sceneStart(lines, i + 1))).map((at) => (
+        <Wipe key={at} at={at} />
       ))}
       <Caption lines={lines} />
       <LineAudio lines={lines} />

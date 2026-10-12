@@ -43,15 +43,17 @@ export const useShake = (frame: number, until = 12, amp = 14) =>
 /** صوت السطر على التايم لاين. */
 export const LineAudio: React.FC<{lines: Line[]}> = ({lines}) => (
   <>
-    {lines.map((l) => (
-      <Sequence key={l.id} from={l.from} durationInFrames={l.to - l.from + 30} name={`voice:${l.id}`}>
-        <Audio src={staticFile(l.file)} />
-      </Sequence>
-    ))}
+    {lines.map((l) =>
+      l.file ? (
+        <Sequence key={l.id} from={l.from} durationInFrames={l.to - l.from + 30} name={`voice:${l.id}`}>
+          <Audio src={staticFile(l.file)} />
+        </Sequence>
+      ) : null,
+    )}
   </>
 );
 
-export type SfxName = 'whoosh' | 'pop' | 'ding';
+export type SfxName = 'whoosh' | 'pop' | 'ding' | 'doorbell' | 'ring';
 
 /** sound effect عند فريم مطلق (استخدمه جوه Scene بفريم محلي، أو برا بفريم مطلق). */
 export const Sfx: React.FC<{name: SfxName; at: number; volume?: number}> = ({name, at, volume = 0.6}) => (

@@ -4,8 +4,10 @@ import {COLORS} from '../lib/theme';
 import {useBounce} from '../lib/stage';
 
 export type PhoneProps = {
-  /** مسار الصورة جوه assets/ مثلاً 'screens/offers.png' */
-  src: string;
+  /** مسار الصورة جوه assets/ مثلاً 'screens/offers.png' (مش لازم لو بتبعت children) */
+  src?: string;
+  /** محتوى مخصص للشاشة بدل الصورة */
+  children?: React.ReactNode;
   width?: number;
   left: number;
   top: number;
@@ -24,6 +26,7 @@ export type PhoneProps = {
 
 export const PhoneMockup: React.FC<PhoneProps> = ({
   src,
+  children,
   width = 560,
   left,
   top,
@@ -70,8 +73,11 @@ export const PhoneMockup: React.FC<PhoneProps> = ({
       }}
     >
       <div style={{position: 'relative', width: screenW, height: screenH, borderRadius: width * 0.095, overflow: 'hidden', background: COLORS.background}}>
+        {children ? (
+          <div style={{position: 'absolute', inset: 0}}>{children}</div>
+        ) : (
         <Img
-          src={staticFile(src)}
+          src={staticFile(src!)}
           style={{
             width: '100%',
             height: '100%',
@@ -81,6 +87,7 @@ export const PhoneMockup: React.FC<PhoneProps> = ({
             transformOrigin: zoom ? `${zoom.x}% ${zoom.y}%` : '50% 50%',
           }}
         />
+        )}
         {highlight && hl >= 0 && (
           <div
             style={{

@@ -104,6 +104,19 @@ def ring(dur=1.5):
     return out
 
 
+def buzzer(dur=0.7):
+    """بزّاز: موجة مربعة خشنة بتتقطع (غلط/رفض)."""
+    n = int(SR * dur)
+    out = []
+    for i in range(n):
+        t = i / SR
+        gate = 1.0 if (t % 0.35) < 0.28 else 0.0
+        sq = 1.0 if math.sin(2 * math.pi * 110 * t) >= 0 else -1.0
+        sq2 = 1.0 if math.sin(2 * math.pi * 165 * t + 0.7) >= 0 else -1.0
+        out.append((sq * 0.55 + sq2 * 0.35) * gate * min(1, t * 400))
+    return out
+
+
 def music(dur=32.0, bpm=96):
     """لوب هادي: pad + arpeggio على سلّم بنتاتوني. بيتكرر في الفيديو."""
     n = int(SR * dur)
@@ -135,7 +148,7 @@ def main():
     args = ap.parse_args()
 
     SFX_DIR.mkdir(parents=True, exist_ok=True)
-    for name, fn in (("whoosh", whoosh), ("pop", pop), ("ding", ding), ("doorbell", doorbell), ("ring", ring)):
+    for name, fn in (("whoosh", whoosh), ("pop", pop), ("ding", ding), ("doorbell", doorbell), ("ring", ring), ("buzzer", buzzer)):
         write_wav(SFX_DIR / f"{name}.wav", fn())
         print("sfx:", SFX_DIR / f"{name}.wav")
 

@@ -53,7 +53,7 @@ export const LineAudio: React.FC<{lines: Line[]}> = ({lines}) => (
   </>
 );
 
-export type SfxName = 'whoosh' | 'pop' | 'ding' | 'doorbell' | 'ring';
+export type SfxName = 'whoosh' | 'pop' | 'ding' | 'doorbell' | 'ring' | 'buzzer';
 
 /** sound effect عند فريم مطلق (استخدمه جوه Scene بفريم محلي، أو برا بفريم مطلق). */
 export const Sfx: React.FC<{name: SfxName; at: number; volume?: number}> = ({name, at, volume = 0.6}) => (

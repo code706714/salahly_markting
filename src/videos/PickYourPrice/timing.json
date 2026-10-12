@@ -1,0 +1,121 @@
+{
+  "video": "PickYourPrice",
+  "synthetic": false,
+  "lines": [
+    {
+      "id": "pa",
+      "speaker": "man",
+      "text": "اطلب، وتجيلك لحد خمس عروض من فنيين متوثقين،",
+      "file": "audio/PickYourPrice/pa.mp3",
+      "duration": 3.213,
+      "words": [
+        {
+          "text": "اطلب،",
+          "start": 0.0,
+          "end": 0.446
+        },
+        {
+          "text": "وتجيلك",
+          "start": 0.446,
+          "end": 0.982
+        },
+        {
+          "text": "لحد",
+          "start": 0.982,
+          "end": 1.25
+        },
+        {
+          "text": "خمس",
+          "start": 1.25,
+          "end": 1.517
+        },
+        {
+          "text": "عروض",
+          "start": 1.517,
+          "end": 1.874
+        },
+        {
+          "text": "من",
+          "start": 1.874,
+          "end": 2.053
+        },
+        {
+          "text": "فنيين",
+          "start": 2.053,
+          "end": 2.499
+        },
+        {
+          "text": "متوثقين،",
+          "start": 2.499,
+          "end": 3.213
+        }
+      ],
+      "at": 2.4
+    },
+    {
+      "id": "pb",
+      "speaker": "man",
+      "text": "فاصل واختار اللي يريحك،",
+      "file": "audio/PickYourPrice/pb.mp3",
+      "duration": 1.149,
+      "words": [
+        {
+          "text": "فاصل",
+          "start": 0.0,
+          "end": 0.23
+        },
+        {
+          "text": "واختار",
+          "start": 0.23,
+          "end": 0.575
+        },
+        {
+          "text": "اللي",
+          "start": 0.575,
+          "end": 0.805
+        },
+        {
+          "text": "يريحك،",
+          "start": 0.805,
+          "end": 1.149
+        }
+      ],
+      "at": 5.9
+    },
+    {
+      "id": "pc",
+      "speaker": "man",
+      "text": "قبل ما حد يدخل بيتك.",
+      "file": "audio/PickYourPrice/pc.mp3",
+      "duration": 1.019,
+      "words": [
+        {
+          "text": "قبل",
+          "start": 0.0,
+          "end": 0.191
+        },
+        {
+          "text": "ما",
+          "start": 0.191,
+          "end": 0.318
+        },
+        {
+          "text": "حد",
+          "start": 0.318,
+          "end": 0.446
+        },
+        {
+          "text": "يدخل",
+          "start": 0.446,
+          "end": 0.7
+        },
+        {
+          "text": "بيتك.",
+          "start": 0.7,
+          "end": 1.019
+        }
+      ],
+      "at": 7.4
+    }
+  ]
+}

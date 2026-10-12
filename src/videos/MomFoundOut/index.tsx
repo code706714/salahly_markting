@@ -69,7 +69,7 @@ const MomNearPhone: React.FC = () => {
   const t = interpolate(frame, [50, 130], [0, 1], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'});
   const ease = 1 - Math.pow(1 - t, 3);
   return (
-    <div style={{position: 'absolute', left: -90, top: 700, transformOrigin: '50% 100%', transform: `translateX(${ease * 150}px) scale(${1 + ease * 0.3})`}}>
+    <div style={{position: 'absolute', left: -110, top: 700, transformOrigin: '50% 100%', transform: `translateX(${ease * 45}px) scale(${1 + ease * 0.12})`}}>
       <Mom mood={frame < 100 ? 'angry' : 'happy'} width={460} delay={0} />
     </div>
   );
@@ -159,7 +159,7 @@ export const MomFoundOut: React.FC = () => (
 
     {/* ===== مشهد 5 (21–25ث): كارت الختام ===== */}
     <Scene from={S5} to={momFoundOutDuration}>
-      <EndCard phrase="أول طلبين مجانًا، وكل ٣ شغلانات طلب هدية" phraseSize={58} />
+      <EndCard phrase="أول طلبين مجانًا، وكل ٣ شغلانات طلب هدية" phraseSize={52} />
     </Scene>
   </VideoShell>
 );

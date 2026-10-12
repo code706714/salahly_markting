@@ -1,0 +1,24 @@
+{
+  "name": "salahly-ads",
+  "version": "1.0.0",
+  "private": true,
+  "description": "إعلانات قصيرة لتطبيق صلحلي - Remotion",
+  "scripts": {
+    "dev": "remotion studio src/index.ts",
+    "voice": "python3 scripts/generate_voice.py",
+    "sfx": "python3 scripts/generate_sfx.py",
+    "render": "bash render.sh",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@remotion/cli": "4.0.535",
+    "@remotion/google-fonts": "4.0.535",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "remotion": "4.0.535"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.31",
+    "typescript": "^7.0.2"
+  }
+}

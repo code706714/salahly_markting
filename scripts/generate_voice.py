@@ -247,6 +247,7 @@ async def process_video(video_dir: Path, offline: bool, rate: str, provider: str
 async def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawTextHelpFormatter)
     ap.add_argument("videos", nargs="*", help="أسماء الفيديوهات (الافتراضي: الكل)")
+    ap.add_argument("--list", action="store_true", help="اطبع كل الجمل المطلوبة (الفيديو، اسم الملف، راجل/ست، النص) وخلاص")
     ap.add_argument("--offline", action="store_true", help="صوت صامت + توقيت تقديري")
     ap.add_argument("--rate", default="+5%", help="سرعة الكلام (افتراضي +5%%)")
     ap.add_argument(
@@ -260,6 +261,17 @@ async def main():
         dirs = [d for d in dirs if d.name in args.videos]
         if not dirs:
             sys.exit(f"مفيش فيديو بالاسم ده. المتاح: {[d.name for d in VIDEOS_DIR.iterdir() if d.is_dir()]}")
+    if args.list:
+        total = 0
+        for d in dirs:
+            sc = json.loads((d / "script.json").read_text(encoding="utf-8"))
+            print(f"\n== {d.name}   ->  assets/audio/{d.name}/")
+            for l in sc["lines"]:
+                total += 1
+                who = "راجل" if l["speaker"] == "man" else "ست  "
+                print(f"  {l['id']:<10}.mp3  [{who}]  {l['text']}")
+        print(f"\nالمجموع: {total} جملة")
+        return
     for d in dirs:
         print(f"== {d.name}")
         await process_video(d, args.offline, args.rate, args.provider)

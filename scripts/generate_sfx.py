@@ -115,7 +115,10 @@ def main():
         tmp = ROOT / "assets" / "_music_tmp.wav"
         write_wav(tmp, music())
         subprocess.run(
-            ["ffmpeg", "-y", "-loglevel", "error", "-i", str(tmp), "-codec:a", "libmp3lame", "-b:a", "128k",
+            ["ffmpeg", "-y", "-loglevel", "error", "-i", str(tmp),
+             # عالية عن قصد: الفيديو بيشغّلها على 15%، فلو الملف خافت مش هتتسمع
+             "-af", "loudnorm=I=-12:TP=-1.5:LRA=7",
+             "-codec:a", "libmp3lame", "-b:a", "128k",
              str(ROOT / "assets" / "music.mp3")],
             check=True,
         )

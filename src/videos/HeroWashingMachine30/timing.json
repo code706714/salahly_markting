@@ -1,0 +1,341 @@
+{
+  "video": "HeroWashingMachine30",
+  "synthetic": false,
+  "lines": [
+    {
+      "id": "h2",
+      "speaker": "woman",
+      "text": "لأ، لأ، لأ! تاني لأ!",
+      "file": "audio/HeroWashingMachine30/h2.mp3",
+      "duration": 1.437,
+      "words": [
+        {
+          "text": "لأ،",
+          "start": 0.0,
+          "end": 0.269
+        },
+        {
+          "text": "لأ،",
+          "start": 0.269,
+          "end": 0.539
+        },
+        {
+          "text": "لأ!",
+          "start": 0.539,
+          "end": 0.808
+        },
+        {
+          "text": "تاني",
+          "start": 0.808,
+          "end": 1.167
+        },
+        {
+          "text": "لأ!",
+          "start": 1.167,
+          "end": 1.437
+        }
+      ],
+      "at": 3.0
+    },
+    {
+      "id": "n3",
+      "speaker": "operator",
+      "text": "رقمك والكود على الواتساب، من غير باسورد.",
+      "file": "audio/HeroWashingMachine30/n3.mp3",
+      "duration": 2.299,
+      "words": [
+        {
+          "text": "رقمك",
+          "start": 0.0,
+          "end": 0.27
+        },
+        {
+          "text": "والكود",
+          "start": 0.27,
+          "end": 0.676
+        },
+        {
+          "text": "على",
+          "start": 0.676,
+          "end": 0.879
+        },
+        {
+          "text": "الواتساب،",
+          "start": 0.879,
+          "end": 1.487
+        },
+        {
+          "text": "من",
+          "start": 1.487,
+          "end": 1.623
+        },
+        {
+          "text": "غير",
+          "start": 1.623,
+          "end": 1.825
+        },
+        {
+          "text": "باسورد.",
+          "start": 1.825,
+          "end": 2.299
+        }
+      ],
+      "at": 4.6
+    },
+    {
+      "id": "n4",
+      "speaker": "operator",
+      "text": "الطلب بيوصل للفنيين الموثّقين حواليكي.",
+      "file": "audio/HeroWashingMachine30/n4.mp3",
+      "duration": 2.22,
+      "words": [
+        {
+          "text": "الطلب",
+          "start": 0.0,
+          "end": 0.327
+        },
+        {
+          "text": "بيوصل",
+          "start": 0.327,
+          "end": 0.653
+        },
+        {
+          "text": "للفنيين",
+          "start": 0.653,
+          "end": 1.11
+        },
+        {
+          "text": "الموثّقين",
+          "start": 1.11,
+          "end": 1.698
+        },
+        {
+          "text": "حواليكي.",
+          "start": 1.698,
+          "end": 2.22
+        }
+      ],
+      "at": 7.0
+    },
+    {
+      "id": "n5",
+      "speaker": "operator",
+      "text": "لحد خمس عروض، تفاصلي، والسعر قبل ما حد يدخل.",
+      "file": "audio/HeroWashingMachine30/n5.mp3",
+      "duration": 3.736,
+      "words": [
+        {
+          "text": "لحد",
+          "start": 0.0,
+          "end": 0.311
+        },
+        {
+          "text": "خمس",
+          "start": 0.311,
+          "end": 0.623
+        },
+        {
+          "text": "عروض،",
+          "start": 0.623,
+          "end": 1.141
+        },
+        {
+          "text": "تفاصلي،",
+          "start": 1.141,
+          "end": 1.868
+        },
+        {
+          "text": "والسعر",
+          "start": 1.868,
+          "end": 2.49
+        },
+        {
+          "text": "قبل",
+          "start": 2.49,
+          "end": 2.802
+        },
+        {
+          "text": "ما",
+          "start": 2.802,
+          "end": 3.009
+        },
+        {
+          "text": "حد",
+          "start": 3.009,
+          "end": 3.217
+        },
+        {
+          "text": "يدخل.",
+          "start": 3.217,
+          "end": 3.736
+        }
+      ],
+      "at": 9.3
+    },
+    {
+      "id": "n6",
+      "speaker": "operator",
+      "text": "فني ببطاقته، ومتقيّم من ناس زيك.",
+      "file": "audio/HeroWashingMachine30/n6.mp3",
+      "duration": 2.011,
+      "words": [
+        {
+          "text": "فني",
+          "start": 0.0,
+          "end": 0.223
+        },
+        {
+          "text": "ببطاقته،",
+          "start": 0.223,
+          "end": 0.819
+        },
+        {
+          "text": "ومتقيّم",
+          "start": 0.819,
+          "end": 1.341
+        },
+        {
+          "text": "من",
+          "start": 1.341,
+          "end": 1.49
+        },
+        {
+          "text": "ناس",
+          "start": 1.49,
+          "end": 1.713
+        },
+        {
+          "text": "زيك.",
+          "start": 1.713,
+          "end": 2.011
+        }
+      ],
+      "at": 13.2
+    },
+    {
+      "id": "n9",
+      "speaker": "operator",
+      "text": "ضمان أربعتاشر يوم، والفني بييجي ببلاش.",
+      "file": "audio/HeroWashingMachine30/n9.mp3",
+      "duration": 2.743,
+      "words": [
+        {
+          "text": "ضمان",
+          "start": 0.0,
+          "end": 0.332
+        },
+        {
+          "text": "أربعتاشر",
+          "start": 0.332,
+          "end": 0.997
+        },
+        {
+          "text": "يوم،",
+          "start": 0.997,
+          "end": 1.33
+        },
+        {
+          "text": "والفني",
+          "start": 1.33,
+          "end": 1.829
+        },
+        {
+          "text": "بييجي",
+          "start": 1.829,
+          "end": 2.244
+        },
+        {
+          "text": "ببلاش.",
+          "start": 2.244,
+          "end": 2.743
+        }
+      ],
+      "at": 18.5
+    },
+    {
+      "id": "n10",
+      "speaker": "operator",
+      "text": "كل تلات شغلانات، طلب هدية، ومعاد الصيانة.",
+      "file": "audio/HeroWashingMachine30/n10.mp3",
+      "duration": 3.213,
+      "words": [
+        {
+          "text": "كل",
+          "start": 0.0,
+          "end": 0.184
+        },
+        {
+          "text": "تلات",
+          "start": 0.184,
+          "end": 0.551
+        },
+        {
+          "text": "شغلانات،",
+          "start": 0.551,
+          "end": 1.285
+        },
+        {
+          "text": "طلب",
+          "start": 1.285,
+          "end": 1.561
+        },
+        {
+          "text": "هدية،",
+          "start": 1.561,
+          "end": 2.02
+        },
+        {
+          "text": "ومعاد",
+          "start": 2.02,
+          "end": 2.479
+        },
+        {
+          "text": "الصيانة.",
+          "start": 2.479,
+          "end": 3.213
+        }
+      ],
+      "at": 21.3
+    },
+    {
+      "id": "w11",
+      "speaker": "woman",
+      "text": "من النهارده، الجروب ده للوصفات بس.",
+      "file": "audio/HeroWashingMachine30/w11.mp3",
+      "duration": 2.299,
+      "words": [
+        {
+          "text": "من",
+          "start": 0.0,
+          "end": 0.159
+        },
+        {
+          "text": "النهارده،",
+          "start": 0.159,
+          "end": 0.872
+        },
+        {
+          "text": "الجروب",
+          "start": 0.872,
+          "end": 1.348
+        },
+        {
+          "text": "ده",
+          "start": 1.348,
+          "end": 1.506
+        },
+        {
+          "text": "للوصفات",
+          "start": 1.506,
+          "end": 2.061
+        },
+        {
+          "text": "بس.",
+          "start": 2.061,
+          "end": 2.299
+        }
+      ],
+      "at": 24.6
+    }
+  ]
+}

@@ -8,6 +8,9 @@ import {GroupTechnician, groupTechnicianDuration} from './videos/GroupTechnician
 import {PickYourPrice, pickYourPriceDuration} from './videos/PickYourPrice';
 import {MomFoundOut, momFoundOutDuration} from './videos/MomFoundOut';
 import {TechGroups, techGroupsDuration} from './videos/TechGroups';
+import {HeroWashingMachine, heroWashingMachineDuration} from './videos/HeroWashingMachine';
+import {HeroTechnician, heroTechnicianDuration} from './videos/HeroTechnician';
+import {HeroWashingMachine30, heroWashingMachine30Duration} from './videos/HeroWashingMachine30';
 
 // id الـ Composition = اسم فولدر الفيديو في src/videos (render.sh بيعتمد على كده)
 export const Root: React.FC = () => (
@@ -19,5 +22,8 @@ export const Root: React.FC = () => (
     <Composition id="PickYourPrice" component={PickYourPrice} durationInFrames={pickYourPriceDuration} fps={FPS} width={W} height={H} />
     <Composition id="MomFoundOut" component={MomFoundOut} durationInFrames={momFoundOutDuration} fps={FPS} width={W} height={H} />
     <Composition id="TechGroups" component={TechGroups} durationInFrames={techGroupsDuration} fps={FPS} width={W} height={H} />
+    <Composition id="HeroWashingMachine" component={HeroWashingMachine} durationInFrames={heroWashingMachineDuration} fps={FPS} width={W} height={H} />
+    <Composition id="HeroWashingMachine30" component={HeroWashingMachine30} durationInFrames={heroWashingMachine30Duration} fps={FPS} width={W} height={H} />
+    <Composition id="HeroTechnician" component={HeroTechnician} durationInFrames={heroTechnicianDuration} fps={FPS} width={W} height={H} />
   </>
 );

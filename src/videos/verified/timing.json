@@ -1,48 +1,48 @@
 {
   "video": "verified",
-  "synthetic": true,
+  "synthetic": false,
   "lines": [
     {
       "id": "hook",
       "speaker": "man",
       "text": "استنى! الفني اللي داخل بيتك ده تعرفه؟",
       "file": "audio/verified/hook.mp3",
-      "duration": 2.68,
+      "duration": 2.273,
       "words": [
         {
           "text": "استنى!",
           "start": 0.0,
-          "end": 0.519
+          "end": 0.44
         },
         {
           "text": "الفني",
-          "start": 0.519,
-          "end": 0.951
+          "start": 0.44,
+          "end": 0.806
         },
         {
           "text": "اللي",
-          "start": 0.951,
-          "end": 1.297
+          "start": 0.806,
+          "end": 1.1
         },
         {
           "text": "داخل",
-          "start": 1.297,
-          "end": 1.643
+          "start": 1.1,
+          "end": 1.393
         },
         {
           "text": "بيتك",
-          "start": 1.643,
-          "end": 1.988
+          "start": 1.393,
+          "end": 1.686
         },
         {
           "text": "ده",
-          "start": 1.988,
-          "end": 2.161
+          "start": 1.686,
+          "end": 1.833
         },
         {
           "text": "تعرفه؟",
-          "start": 2.161,
-          "end": 2.68
+          "start": 1.833,
+          "end": 2.273
         }
       ]
     },
@@ -51,37 +51,37 @@
       "speaker": "woman",
       "text": "مش عارفة، حد جابه لي وخلاص.",
       "file": "audio/verified/who.mp3",
-      "duration": 2.34,
+      "duration": 1.541,
       "words": [
         {
           "text": "مش",
           "start": 0.0,
-          "end": 0.213
+          "end": 0.14
         },
         {
           "text": "عارفة،",
-          "start": 0.213,
-          "end": 0.851
+          "start": 0.14,
+          "end": 0.56
         },
         {
           "text": "حد",
-          "start": 0.851,
-          "end": 1.064
+          "start": 0.56,
+          "end": 0.701
         },
         {
           "text": "جابه",
-          "start": 1.064,
-          "end": 1.489
+          "start": 0.701,
+          "end": 0.981
         },
         {
           "text": "لي",
-          "start": 1.489,
-          "end": 1.702
+          "start": 0.981,
+          "end": 1.121
         },
         {
           "text": "وخلاص.",
-          "start": 1.702,
-          "end": 2.34
+          "start": 1.121,
+          "end": 1.541
         }
       ]
     },
@@ -90,42 +90,42 @@
       "speaker": "man",
       "text": "وبعدين لو الشغل باظ أكتر؟ هنلاقيه فين؟",
       "file": "audio/verified/angry.mp3",
-      "duration": 2.68,
+      "duration": 2.377,
       "words": [
         {
           "text": "وبعدين",
           "start": 0.0,
-          "end": 0.503
+          "end": 0.446
         },
         {
           "text": "لو",
-          "start": 0.503,
-          "end": 0.67
+          "start": 0.446,
+          "end": 0.594
         },
         {
           "text": "الشغل",
-          "start": 0.67,
-          "end": 1.089
+          "start": 0.594,
+          "end": 0.966
         },
         {
           "text": "باظ",
-          "start": 1.089,
-          "end": 1.34
+          "start": 0.966,
+          "end": 1.189
         },
         {
           "text": "أكتر؟",
-          "start": 1.34,
-          "end": 1.759
+          "start": 1.189,
+          "end": 1.56
         },
         {
           "text": "هنلاقيه",
-          "start": 1.759,
-          "end": 2.345
+          "start": 1.56,
+          "end": 2.08
         },
         {
           "text": "فين؟",
-          "start": 2.345,
-          "end": 2.68
+          "start": 2.08,
+          "end": 2.377
         }
       ]
     },
@@ -134,47 +134,47 @@
       "speaker": "woman",
       "text": "في صلحلي كل فني متوثق بالبطاقة ورقم الموبايل.",
       "file": "audio/verified/verified.mp3",
-      "duration": 3.02,
+      "duration": 3.344,
       "words": [
         {
           "text": "في",
           "start": 0.0,
-          "end": 0.159
+          "end": 0.176
         },
         {
           "text": "صلحلي",
-          "start": 0.159,
-          "end": 0.556
+          "start": 0.176,
+          "end": 0.616
         },
         {
           "text": "كل",
-          "start": 0.556,
-          "end": 0.715
+          "start": 0.616,
+          "end": 0.792
         },
         {
           "text": "فني",
-          "start": 0.715,
-          "end": 0.954
+          "start": 0.792,
+          "end": 1.056
         },
         {
           "text": "متوثق",
-          "start": 0.954,
-          "end": 1.351
+          "start": 1.056,
+          "end": 1.496
         },
         {
           "text": "بالبطاقة",
-          "start": 1.351,
-          "end": 1.987
+          "start": 1.496,
+          "end": 2.2
         },
         {
           "text": "ورقم",
-          "start": 1.987,
-          "end": 2.305
+          "start": 2.2,
+          "end": 2.552
         },
         {
           "text": "الموبايل.",
-          "start": 2.305,
-          "end": 3.02
+          "start": 2.552,
+          "end": 3.344
         }
       ]
     },
@@ -183,42 +183,42 @@
       "speaker": "man",
       "text": "وشايف تقييمات الناس وشغلانته قبل ما تختار.",
       "file": "audio/verified/rating.mp3",
-      "duration": 2.68,
+      "duration": 2.247,
       "words": [
         {
           "text": "وشايف",
           "start": 0.0,
-          "end": 0.372
+          "end": 0.312
         },
         {
           "text": "تقييمات",
-          "start": 0.372,
-          "end": 0.893
+          "start": 0.312,
+          "end": 0.749
         },
         {
           "text": "الناس",
-          "start": 0.893,
-          "end": 1.266
+          "start": 0.749,
+          "end": 1.061
         },
         {
           "text": "وشغلانته",
-          "start": 1.266,
-          "end": 1.861
+          "start": 1.061,
+          "end": 1.56
         },
         {
           "text": "قبل",
-          "start": 1.861,
-          "end": 2.084
+          "start": 1.56,
+          "end": 1.747
         },
         {
           "text": "ما",
-          "start": 2.084,
-          "end": 2.233
+          "start": 1.747,
+          "end": 1.872
         },
         {
           "text": "تختار.",
-          "start": 2.233,
-          "end": 2.68
+          "start": 1.872,
+          "end": 2.247
         }
       ]
     },
@@ -227,42 +227,42 @@
       "speaker": "woman",
       "text": "وبتتابع طلبك خطوة بخطوة لحد ما يخلص.",
       "file": "audio/verified/track.mp3",
-      "duration": 2.68,
+      "duration": 2.586,
       "words": [
         {
           "text": "وبتتابع",
           "start": 0.0,
-          "end": 0.625
+          "end": 0.603
         },
         {
           "text": "طلبك",
-          "start": 0.625,
-          "end": 0.983
+          "start": 0.603,
+          "end": 0.948
         },
         {
           "text": "خطوة",
-          "start": 0.983,
-          "end": 1.34
+          "start": 0.948,
+          "end": 1.293
         },
         {
           "text": "بخطوة",
-          "start": 1.34,
-          "end": 1.787
+          "start": 1.293,
+          "end": 1.724
         },
         {
           "text": "لحد",
-          "start": 1.787,
-          "end": 2.055
+          "start": 1.724,
+          "end": 1.983
         },
         {
           "text": "ما",
-          "start": 2.055,
-          "end": 2.233
+          "start": 1.983,
+          "end": 2.155
         },
         {
           "text": "يخلص.",
-          "start": 2.233,
-          "end": 2.68
+          "start": 2.155,
+          "end": 2.586
         }
       ]
     },
@@ -271,52 +271,52 @@
       "speaker": "man",
       "text": "صلحلي. فني متوثق على بابك. نزّله من جوجل بلاي.",
       "file": "audio/verified/cta.mp3",
-      "duration": 3.36,
+      "duration": 4.232,
       "words": [
         {
           "text": "صلحلي.",
           "start": 0.0,
-          "end": 0.531
+          "end": 0.668
         },
         {
           "text": "فني",
-          "start": 0.531,
-          "end": 0.796
+          "start": 0.668,
+          "end": 1.002
         },
         {
           "text": "متوثق",
-          "start": 0.796,
-          "end": 1.238
+          "start": 1.002,
+          "end": 1.559
         },
         {
           "text": "على",
-          "start": 1.238,
-          "end": 1.503
+          "start": 1.559,
+          "end": 1.893
         },
         {
           "text": "بابك.",
-          "start": 1.503,
-          "end": 1.945
+          "start": 1.893,
+          "end": 2.45
         },
         {
           "text": "نزّله",
-          "start": 1.945,
-          "end": 2.387
+          "start": 2.45,
+          "end": 3.007
         },
         {
           "text": "من",
-          "start": 2.387,
-          "end": 2.564
+          "start": 3.007,
+          "end": 3.23
         },
         {
           "text": "جوجل",
-          "start": 2.564,
-          "end": 2.918
+          "start": 3.23,
+          "end": 3.675
         },
         {
           "text": "بلاي.",
-          "start": 2.918,
-          "end": 3.36
+          "start": 3.675,
+          "end": 4.232
         }
       ]
     }

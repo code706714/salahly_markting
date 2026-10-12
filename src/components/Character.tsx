@@ -5,7 +5,7 @@ import {useBounce} from '../lib/stage';
 
 export type Mood = 'happy' | 'angry' | 'shocked' | 'worried';
 export type Outfit = 'technician' | 'shirt' | 'hijab';
-export type Gesture = 'none' | 'wave' | 'handsUp' | 'point';
+export type Gesture = 'none' | 'wave' | 'handsUp' | 'point' | 'hips';
 
 export type CharacterProps = {
   outfit?: Outfit;
@@ -140,6 +140,13 @@ export const Character: React.FC<CharacterProps> = ({
       <g transform={`translate(0 ${j})`}>
         {arm('M95 410 Q30 350 62 250', 62, 232)}
         {arm('M305 410 Q370 350 338 250', 338, 232)}
+      </g>
+    );
+  } else if (gesture === 'hips') {
+    arms = (
+      <g>
+        {arm('M95 405 Q4 450 104 536', 108, 538)}
+        {arm('M305 405 Q396 450 296 536', 292, 538)}
       </g>
     );
   } else if (gesture === 'point') {

@@ -1,0 +1,292 @@
+{
+  "video": "MomFoundOut",
+  "synthetic": false,
+  "lines": [
+    {
+      "id": "m1",
+      "speaker": "woman",
+      "text": "إنت جايب واحد معرفوش يدخل البيت؟!",
+      "file": "audio/MomFoundOut/m1.mp3",
+      "duration": 1.933,
+      "words": [
+        {
+          "text": "إنت",
+          "start": 0.0,
+          "end": 0.207
+        },
+        {
+          "text": "جايب",
+          "start": 0.207,
+          "end": 0.483
+        },
+        {
+          "text": "واحد",
+          "start": 0.483,
+          "end": 0.759
+        },
+        {
+          "text": "معرفوش",
+          "start": 0.759,
+          "end": 1.174
+        },
+        {
+          "text": "يدخل",
+          "start": 1.174,
+          "end": 1.45
+        },
+        {
+          "text": "البيت؟!",
+          "start": 1.45,
+          "end": 1.933
+        }
+      ],
+      "at": 0.3,
+      "noCaption": true
+    },
+    {
+      "id": "s2a",
+      "speaker": "man",
+      "text": "يا ماما، ده رقمه من الجروب.",
+      "file": "audio/MomFoundOut/s2a.mp3",
+      "duration": 1.358,
+      "words": [
+        {
+          "text": "يا",
+          "start": 0.0,
+          "end": 0.123
+        },
+        {
+          "text": "ماما،",
+          "start": 0.123,
+          "end": 0.432
+        },
+        {
+          "text": "ده",
+          "start": 0.432,
+          "end": 0.556
+        },
+        {
+          "text": "رقمه",
+          "start": 0.556,
+          "end": 0.803
+        },
+        {
+          "text": "من",
+          "start": 0.803,
+          "end": 0.926
+        },
+        {
+          "text": "الجروب.",
+          "start": 0.926,
+          "end": 1.358
+        }
+      ],
+      "at": 3.3
+    },
+    {
+      "id": "s2b",
+      "speaker": "woman",
+      "text": "والجروب ده هيرجعلك فلوسك لو باظت الغسالة؟",
+      "file": "audio/MomFoundOut/s2b.mp3",
+      "duration": 2.612,
+      "words": [
+        {
+          "text": "والجروب",
+          "start": 0.0,
+          "end": 0.522
+        },
+        {
+          "text": "ده",
+          "start": 0.522,
+          "end": 0.672
+        },
+        {
+          "text": "هيرجعلك",
+          "start": 0.672,
+          "end": 1.194
+        },
+        {
+          "text": "فلوسك",
+          "start": 1.194,
+          "end": 1.567
+        },
+        {
+          "text": "لو",
+          "start": 1.567,
+          "end": 1.717
+        },
+        {
+          "text": "باظت",
+          "start": 1.717,
+          "end": 2.015
+        },
+        {
+          "text": "الغسالة؟",
+          "start": 2.015,
+          "end": 2.612
+        }
+      ],
+      "at": 5.2
+    },
+    {
+      "id": "n3a",
+      "speaker": "operator",
+      "text": "فني متسجل ببطاقته،",
+      "file": "audio/MomFoundOut/n3a.mp3",
+      "duration": 1.228,
+      "words": [
+        {
+          "text": "فني",
+          "start": 0.0,
+          "end": 0.23
+        },
+        {
+          "text": "متسجل",
+          "start": 0.23,
+          "end": 0.614
+        },
+        {
+          "text": "ببطاقته،",
+          "start": 0.614,
+          "end": 1.228
+        }
+      ],
+      "at": 8.6
+    },
+    {
+      "id": "n3b",
+      "speaker": "operator",
+      "text": "متقيّم من الناس،",
+      "file": "audio/MomFoundOut/n3b.mp3",
+      "duration": 1.149,
+      "words": [
+        {
+          "text": "متقيّم",
+          "start": 0.0,
+          "end": 0.493
+        },
+        {
+          "text": "من",
+          "start": 0.493,
+          "end": 0.657
+        },
+        {
+          "text": "الناس،",
+          "start": 0.657,
+          "end": 1.149
+        }
+      ],
+      "at": 11.2
+    },
+    {
+      "id": "n3c",
+      "speaker": "operator",
+      "text": "وضمان أربعتاشر يوم.",
+      "file": "audio/MomFoundOut/n3c.mp3",
+      "duration": 1.176,
+      "words": [
+        {
+          "text": "وضمان",
+          "start": 0.0,
+          "end": 0.346
+        },
+        {
+          "text": "أربعتاشر",
+          "start": 0.346,
+          "end": 0.899
+        },
+        {
+          "text": "يوم.",
+          "start": 0.899,
+          "end": 1.176
+        }
+      ],
+      "at": 13.6
+    },
+    {
+      "id": "m4",
+      "speaker": "woman",
+      "text": "طب ابقى احجزلي نفسه للتلاجة.",
+      "file": "audio/MomFoundOut/m4.mp3",
+      "duration": 1.62,
+      "words": [
+        {
+          "text": "طب",
+          "start": 0.0,
+          "end": 0.135
+        },
+        {
+          "text": "ابقى",
+          "start": 0.135,
+          "end": 0.405
+        },
+        {
+          "text": "احجزلي",
+          "start": 0.405,
+          "end": 0.81
+        },
+        {
+          "text": "نفسه",
+          "start": 0.81,
+          "end": 1.08
+        },
+        {
+          "text": "للتلاجة.",
+          "start": 1.08,
+          "end": 1.62
+        }
+      ],
+      "at": 18.0
+    },
+    {
+      "id": "n4",
+      "speaker": "operator",
+      "text": "واحجز نفس الفني تاني بضغطة، والتطبيق يفكرك بالصيانة.",
+      "file": "audio/MomFoundOut/n4.mp3",
+      "duration": 3.448,
+      "words": [
+        {
+          "text": "واحجز",
+          "start": 0.0,
+          "end": 0.383
+        },
+        {
+          "text": "نفس",
+          "start": 0.383,
+          "end": 0.613
+        },
+        {
+          "text": "الفني",
+          "start": 0.613,
+          "end": 0.996
+        },
+        {
+          "text": "تاني",
+          "start": 0.996,
+          "end": 1.303
+        },
+        {
+          "text": "بضغطة،",
+          "start": 1.303,
+          "end": 1.762
+        },
+        {
+          "text": "والتطبيق",
+          "start": 1.762,
+          "end": 2.375
+        },
+        {
+          "text": "يفكرك",
+          "start": 2.375,
+          "end": 2.759
+        },
+        {
+          "text": "بالصيانة.",
+          "start": 2.759,
+          "end": 3.448
+        }
+      ],
+      "at": 19.55
+    }
+  ]
+}

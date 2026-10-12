@@ -191,14 +191,14 @@ const LockScreen: React.FC = () => {
 export const OrderFlow: React.FC = () => {
   const f = useCurrentFrame();
   const fade = (a: number, b: number) => interpolate(f, [a, b], [0, 1], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'});
-  const scroll = interpolate(f, [120, 165], [0, 0.6], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'});
-  const jobOp = fade(44, 52) * (1 - fade(166, 174));
+  const scroll = interpolate(f, [96, 122], [0, 0.6], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'});
+  const jobOp = fade(44, 52) * (1 - fade(166, 171));
   return (
     <div style={{position: 'absolute', inset: 0, background: COLORS.background}}>
       <Shot src="screens/tech-new-job.png" pos={scroll} opacity={jobOp} />
-      <Hl x={8} y={53} w={86} h={8} from={56} to={118} />
-      <Hl x={10} y={60} w={84} h={8.5} from={128} to={164} />
-      <Shot src="screens/tech-quote.png" pos={0.3} opacity={fade(166, 174)} />
+      <Hl x={8} y={53} w={86} h={8} from={56} to={94} />
+      <Hl x={10} y={60} w={84} h={9} from={126} to={164} />
+      <Shot src="screens/tech-quote.png" pos={0.3} opacity={fade(166, 171)} />
       {f < 52 && <div style={{position: 'absolute', inset: 0, opacity: 1 - fade(44, 52)}}><LockScreen /></div>}
     </div>
   );

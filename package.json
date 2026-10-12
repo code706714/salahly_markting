@@ -7,7 +7,7 @@
     "dev": "remotion studio src/index.ts",
     "voice": "python3 scripts/generate_voice.py",
     "sfx": "python3 scripts/generate_sfx.py",
-    "render": "bash render.sh",
+    "render": "node scripts/render.mjs",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {

@@ -37,6 +37,22 @@ npm run dev                                  # Remotion Studio على http://loc
 > **مهم:** ملفات `timing.json` اللي في الريبو متولّدة بـ `--offline` (صوت صامت وتوقيت تقديري) عشان المشروع يشتغل من أول مرة.
 > لازم تشغّل `generate_voice.py` من غير `--offline` قبل الرندر النهائي عشان يبقى فيه صوت حقيقي.
 
+## على ويندوز (PowerShell)
+
+```powershell
+# 1) سطّب Python من https://www.python.org/downloads/ وعلّم على "Add python.exe to PATH"
+#    (بعدها اقفل PowerShell وافتحه تاني)
+npm install
+py -m pip install -r requirements.txt
+py scripts/generate_voice.py
+npm run dev               # معاينة
+npm run render            # بدل ./render.sh (ده bash ومش بيشتغل على PowerShell)
+npm run render -- ac-scam # فيديو واحد
+```
+
+لو الـ Studio طلّع خطأ من `chrome-extension://...` فده من إضافة في المتصفح، مش من المشروع.
+افتح `http://localhost:3000` في نافذة Incognito أو اقفل الإضافة دي.
+
 ## تعديل النص
 
 كل فيديو له `src/videos/<id>/script.json`:

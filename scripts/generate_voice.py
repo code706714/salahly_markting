@@ -18,6 +18,13 @@ import subprocess
 import sys
 from pathlib import Path
 
+# كونسول ويندوز مش بيطبع عربي من غير كده
+for _s in (sys.stdout, sys.stderr):
+    try:
+        _s.reconfigure(encoding="utf-8")
+    except Exception:
+        pass
+
 ROOT = Path(__file__).resolve().parent.parent
 VIDEOS_DIR = ROOT / "src" / "videos"
 AUDIO_DIR = ROOT / "assets" / "audio"

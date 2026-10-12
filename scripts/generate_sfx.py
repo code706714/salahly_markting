@@ -13,8 +13,16 @@ import math
 import random
 import struct
 import subprocess
+import sys
 import wave
 from pathlib import Path
+
+# كونسول ويندوز مش بيطبع عربي من غير كده
+for _s in (sys.stdout, sys.stderr):
+    try:
+        _s.reconfigure(encoding="utf-8")
+    except Exception:
+        pass
 
 ROOT = Path(__file__).resolve().parent.parent
 SFX_DIR = ROOT / "assets" / "sfx"

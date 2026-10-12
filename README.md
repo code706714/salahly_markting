@@ -53,6 +53,22 @@ npm run render -- ac-scam # فيديو واحد
 لو الـ Studio طلّع خطأ من `chrome-extension://...` فده من إضافة في المتصفح، مش من المشروع.
 افتح `http://localhost:3000` في نافذة Incognito أو اقفل الإضافة دي.
 
+## لو edge-tts طلّع 403 (عطل من مايكروسوفت من حوالي 10 أكتوبر 2026)
+
+الخطأ `WSServerHandshakeError: 403` مش مشكلة عندك — شوف https://github.com/rany2/edge-tts/issues/490. الحلول:
+
+1. `pip install -U edge-tts` وجرّب تاني بعد شوية (لما ينزل إصلاح).
+2. VPN بخروج أمريكي، أو `$env:HTTPS_PROXY="http://host:port"` في PowerShell (السكريبت بيمرّره لـ edge-tts).
+3. **Azure Speech** (الخدمة الرسمية، نفس الأصوات ar-EG-ShakirNeural / ar-EG-SalmaNeural، وفيه free tier):
+   1. اعمل Speech resource في https://portal.azure.com، وخد الـ Key والـ Region (مثلاً `westeurope`).
+   2. PowerShell:
+      ```powershell
+      $env:AZURE_SPEECH_KEY="xxxxxxxx"
+      $env:AZURE_SPEECH_REGION="westeurope"
+      py scripts/generate_voice.py --provider azure
+      ```
+   توقيت الكلمات مع Azure بيتوزّع حسب عدد الحروف (REST مفيهوش word timing)، فالترجمة تقريبية جوه السطر لكن توقيت السطر نفسه مظبوط على الصوت.
+
 ## تعديل النص
 
 كل فيديو له `src/videos/<id>/script.json`:

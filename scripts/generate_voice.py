@@ -5,6 +5,9 @@
   python3 scripts/generate_voice.py              # كل الفيديوهات
   python3 scripts/generate_voice.py ac-scam      # فيديو واحد
   python3 scripts/generate_voice.py --offline    # بدون إنترنت: صوت صامت + توقيت تقديري (للتجربة بس)
+  python3 scripts/generate_voice.py --provider local
+      # بتستخدم ملفات صوت انت جبتها (تسجيلك، أو أي موقع TTS): assets/audio/<video>/<line-id>.mp3 أو .wav
+      # السكريبت بيقيس مدة كل ملف ويطلّع timing.json — ولو ناقص ملفات بيطبعلك القايمة
   python3 scripts/generate_voice.py --provider azure
       # نفس أصوات ar-EG-Shakir/Salma من Azure Speech الرسمي (لو edge-tts واقع — شوف README)
       # محتاج: AZURE_SPEECH_KEY و AZURE_SPEECH_REGION (مثلاً westeurope)
@@ -151,7 +154,26 @@ EDGE_BROKEN_HELP = """
    1) استنى لحد ما edge-tts يتحدّث:  pip install -U edge-tts   وجرّب تاني بعد كام ساعة/يوم
    2) شغّل VPN بخروج أمريكي (أو اضبط HTTPS_PROXY) — ناس كتير قالت إنه بيحلها
    3) استخدم Azure Speech (نفس الأصوات):  python3 scripts/generate_voice.py --provider azure
+   4) استخدم ملفات صوت جاهزة (تسجيلك أو أي موقع TTS):  python3 scripts/generate_voice.py --provider local
 """
+
+
+def find_local_audio(out_dir: Path, line_id: str):
+    for ext in ("mp3", "wav"):
+        p = out_dir / f"{line_id}.{ext}"
+        if p.exists():
+            return p
+    return None
+
+
+def audio_duration(path: Path) -> float:
+    try:
+        import mutagen
+
+        f = mutagen.File(str(path))
+        return float(f.info.length)
+    except Exception:
+        return mp3_duration(path)  # ffprobe
 
 
 def synth_offline(text: str, out_path: Path):
@@ -172,14 +194,29 @@ async def process_video(video_dir: Path, offline: bool, rate: str, provider: str
     out_dir = AUDIO_DIR / vid
     out_dir.mkdir(parents=True, exist_ok=True)
 
+    if provider == "local" and not offline:
+        missing = [l for l in script["lines"] if not find_local_audio(out_dir, l["id"])]
+        if missing:
+            print(f"!! [{vid}] ناقص {len(missing)} ملف صوت. حطهم في {out_dir.relative_to(ROOT)} (mp3 أو wav) بالأسماء دي:")
+            for l in missing:
+                who = "راجل" if l["speaker"] == "man" else "ست"
+                print(f"   {l['id']}.mp3   ({who})   {l['text']}")
+            sys.exit(1)
+
     lines_out = []
     for line in script["lines"]:
         speaker = line["speaker"]
         if speaker not in VOICES:
             sys.exit(f"[{vid}] speaker غلط في السطر {line['id']}: {speaker} (man أو woman)")
         out_path = out_dir / f"{line['id']}.mp3"
+        file_rel = f"audio/{vid}/{line['id']}.mp3"
         if offline:
             duration, words = synth_offline(line["text"], out_path)
+        elif provider == "local":
+            found = find_local_audio(out_dir, line["id"])
+            file_rel = f"audio/{vid}/{found.name}"
+            duration = audio_duration(found)
+            words = spread_words(line["text"], duration)
         else:
             synth = synth_azure if provider == "azure" else synth_edge
             try:
@@ -195,7 +232,7 @@ async def process_video(video_dir: Path, offline: bool, rate: str, provider: str
             "id": line["id"],
             "speaker": speaker,
             "text": line["text"],
-            "file": f"audio/{vid}/{line['id']}.mp3",
+            "file": file_rel,
             "duration": round(duration, 3),
             "words": words,
         })
@@ -213,8 +250,8 @@ async def main():
     ap.add_argument("--offline", action="store_true", help="صوت صامت + توقيت تقديري")
     ap.add_argument("--rate", default="+5%", help="سرعة الكلام (افتراضي +5%%)")
     ap.add_argument(
-        "--provider", choices=["edge", "azure"], default=os.environ.get("VOICE_PROVIDER", "edge"),
-        help="edge (افتراضي) أو azure (Azure Speech الرسمي بنفس الأصوات)",
+        "--provider", choices=["edge", "azure", "local"], default=os.environ.get("VOICE_PROVIDER", "edge"),
+        help="edge (افتراضي) | azure (Azure Speech) | local (ملفات صوت جاهزة عندك)",
     )
     args = ap.parse_args()
 

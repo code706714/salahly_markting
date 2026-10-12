@@ -13,6 +13,7 @@
 import argparse
 import asyncio
 import json
+import os
 import subprocess
 import sys
 from pathlib import Path
@@ -59,7 +60,9 @@ def spread_words(text: str, duration: float):
 async def synth_edge(text: str, voice: str, rate: str, out_path: Path):
     import edge_tts
 
-    comm = edge_tts.Communicate(text, voice, rate=rate, boundary="WordBoundary")
+    # aiohttp مش بيقرا HTTPS_PROXY لوحده، فبنمرره صريح لو موجود
+    proxy = os.environ.get("HTTPS_PROXY") or os.environ.get("https_proxy")
+    comm = edge_tts.Communicate(text, voice, rate=rate, boundary="WordBoundary", proxy=proxy)
     audio = bytearray()
     events = []
     async for chunk in comm.stream():

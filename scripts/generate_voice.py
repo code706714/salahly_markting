@@ -251,6 +251,8 @@ async def process_video(video_dir: Path, offline: bool, rate: str, provider: str
             entry["at"] = line["at"]
         if line.get("noCaption"):
             entry["noCaption"] = True
+        if line.get("note"):
+            entry["note"] = line["note"]
         lines_out.append(entry)
 
     timing = {"video": vid, "synthetic": offline, "lines": lines_out}

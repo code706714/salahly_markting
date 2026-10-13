@@ -366,9 +366,9 @@ export const WashingStory: React.FC<{lines: Line[]; total: number; bounds: numbe
         </Scene>
       ))}
       <Scene from={bounds[11]} to={bounds[12]}>
-        <EndCard phrase="فنيين موثّقين · سعرك قبل ما ييجي · ضمان ١٤ يوم" phraseSize={44}>
-          <div style={{...baseText, position: 'absolute', left: 0, top: 1275, width: W, textAlign: 'center', fontSize: 64, color: D, background: COLORS.accent, padding: '10px 0 16px', borderTop: `6px solid ${D}`, borderBottom: `6px solid ${D}`}}>
-            أول طلبين مجانًا
+        <EndCard phrase="ضمان ١٤ يوم: الفني يرجعلك يكشف ببلاش، وقطع الغيار لو اتغيرت بتتدفع" phraseSize={46}>
+          <div style={{...baseText, position: 'absolute', left: 0, top: 1275, width: W, textAlign: 'center', fontSize: 38, color: D, background: COLORS.accent, padding: '12px 0 16px', borderTop: `6px solid ${D}`, borderBottom: `6px solid ${D}`}}>
+            فنيين موثّقين · سعرك قبل ما ييجي · أول طلبين مجانًا
           </div>
         </EndCard>
       </Scene>

@@ -58,6 +58,11 @@ export const Caption: React.FC<{lines: Line[]; bottom?: number}> = ({lines, bott
           );
         })}
       </div>
+      {line.note ? (
+        <div style={{...baseText, fontWeight: 400, color: COLORS.background, fontSize: 38, lineHeight: 1.3, textAlign: 'center', marginTop: 6, opacity: interpolate(frame, [line.from + 6, line.from + 14], [0, 1], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'})}}>
+          {line.note}
+        </div>
+      ) : null}
     </div>
   );
 };

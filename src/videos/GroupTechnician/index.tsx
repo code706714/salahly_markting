@@ -23,7 +23,7 @@ export const groupTechnicianDuration = 900;
 const S2 = 90; // 3ث
 const S3 = 270; // 9ث
 const S4 = 450; // 15ث
-const S5 = 750; // 25ث
+const S5 = 795; // 26.5ث (جملة الضمان الكاملة بتخلص قبل كارت الختام)
 
 const Woman: React.FC<React.ComponentProps<typeof Character>> = (p) => {
   const speaking = useSpeaker() === 'woman';
@@ -131,7 +131,7 @@ export const GroupTechnician: React.FC = () => (
 
         <FeatureCard text="فني متسجل ببطاقته" delay={16} top={380} />
         <FeatureCard text="٥ عروض والسعر قبل ما ييجي" delay={100} top={620} />
-        <FeatureCard text="ضمان ١٤ يوم + زيارة مجانية" delay={202} top={860} />
+        <FeatureCard text="ضمان ١٤ يوم:" sub="الفني يرجعلك يكشف ببلاش، وقطع الغيار لو اتغيرت بتتدفع" delay={202} top={840} />
       </FlipIn>
     </Scene>
 

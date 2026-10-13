@@ -514,7 +514,7 @@ export const WarrantyPanel: React.FC<{from: number}> = ({from}) => {
   return (
     <div style={{...baseText, position: 'absolute', left: 0, right: 0, bottom: 0, background: COLORS.white, borderRadius: '36px 36px 0 0', borderTop: `4px solid ${LINE}`, boxShadow: '0 -14px 30px rgba(47,59,42,0.25)', padding: '26px 24px 30px', transform: `translateY(${(1 - s) * 520}px)`, color: D}}>
       <div style={{fontSize: 34, marginBottom: 6}}>الغسالة رجعت تكح؟</div>
-      <div style={{fontSize: 24, fontWeight: 400, opacity: 0.7, marginBottom: 18}}>لسه جوه الـ ١٤ يوم ضمان</div>
+      <div style={{fontSize: 24, fontWeight: 400, opacity: 0.8, marginBottom: 18, lineHeight: 1.3}}>ضمان ١٤ يوم: الفني يرجعلك يكشف ببلاش، وقطع الغيار لو اتغيرت بتتدفع</div>
       <div style={{background: COLORS.primary, color: COLORS.white, borderRadius: 24, padding: '18px 0 22px', textAlign: 'center', fontSize: 38, transform: `scale(${press ? 0.95 : 1})`, boxShadow: press ? `0 0 0 10px rgba(184,73,44,0.25)` : 'none'}}>اطلب زيارة ضمان</div>
       <div style={{marginTop: 14, textAlign: 'center', fontSize: 28, color: COLORS.primary}}>عندي مشكلة</div>
     </div>

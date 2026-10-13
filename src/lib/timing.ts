@@ -16,6 +16,8 @@ export type RawLine = {
   at?: number;
   /** ما تعرضش الترجمة السفلية للسطر ده */
   noCaption?: boolean;
+  /** سطر صغير تحت الترجمة (ملاحظة) */
+  note?: string;
 };
 export type Timing = {video: string; synthetic?: boolean; lines: RawLine[]};
 

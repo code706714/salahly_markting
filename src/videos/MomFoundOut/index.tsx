@@ -107,18 +107,18 @@ export const MomFoundOut: React.FC = () => (
     {/* ===== مشهد 3 (8–18ث): صلحلي على الموبايل ===== */}
     <Scene from={S3} to={S4}>
       <Backdrop tone="light" />
-      <Sticker from={18} to={92} text="متوثق بالبطاقة">
+      <Sticker from={18} to={90} text="متوثق بالبطاقة">
         <IdCardIcon />
       </Sticker>
-      <Sticker from={96} to={164} text="تقييمات زباين قبله">
+      <Sticker from={94} to={122} text="تقييمات زباين قبله">
         <StarsIcon />
       </Sticker>
-      <Sticker from={168} to={300} text="ضمان ١٤ يوم">
+      <Sticker from={124} to={300} text="ضمان ١٤ يوم">
         <ShieldIcon />
       </Sticker>
       <Sfx name="pop" at={18} />
-      <Sfx name="pop" at={96} />
-      <Sfx name="ding" at={168} volume={0.6} />
+      <Sfx name="pop" at={94} />
+      <Sfx name="ding" at={124} volume={0.6} />
       <PhoneMockup
         src="screens/tech-profile.png"
         width={500}

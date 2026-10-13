@@ -11,7 +11,8 @@ import {EndCard} from '../../components/EndCard';
 import {Logo} from '../../components/Logo';
 import {HookTitle} from '../../components/HookTitle';
 import {Burst} from '../../components/Props';
-import {FeatureRow, GiftIcon, IdCardIcon, Jitter, PickScreen, ShieldIcon} from './parts';
+import {FeatureRow, GiftIcon, IdCardIcon, Jitter, PickScreen} from './parts';
+import {SupportIcon} from '../_hero/parts';
 
 const lines: Line[] = layoutLines(timingJson as Timing);
 
@@ -59,8 +60,8 @@ export const PickYourPrice: React.FC = () => (
         <Logo size={120} />
         <span style={{...baseText, fontSize: 104, color: COLORS.white, WebkitTextStroke: `9px ${COLORS.dark}`, paintOrder: 'stroke fill', textShadow: `0 8px 0 ${COLORS.dark}`}}>صلحلي</span>
       </div>
-      <FeatureRow top={270} delay={4} text="ضمان ١٤ يوم">
-        <ShieldIcon />
+      <FeatureRow top={270} delay={4} text="متابعة وشكوى وتقييم">
+        <SupportIcon />
       </FeatureRow>
       <FeatureRow top={650} delay={34} text="مسجل ببطاقته">
         <IdCardIcon />

@@ -12,7 +12,8 @@ import {EndCard} from '../../components/EndCard';
 import {HookTitle} from '../../components/HookTitle';
 import {SpeechBubble} from '../../components/SpeechBubble';
 import {Burst, Wrench} from '../../components/Props';
-import {IdCardIcon, Jitter, ShieldIcon} from '../PickYourPrice/parts';
+import {IdCardIcon, Jitter} from '../PickYourPrice/parts';
+import {SupportIcon} from '../_hero/parts';
 
 const lines: Line[] = layoutLines(timingJson as Timing);
 
@@ -113,8 +114,8 @@ export const MomFoundOut: React.FC = () => (
       <Sticker from={94} to={122} text="تقييمات زباين قبله">
         <StarsIcon />
       </Sticker>
-      <Sticker from={124} to={300} text="ضمان ١٤ يوم">
-        <ShieldIcon />
+      <Sticker from={124} to={300} text="شكوى ومتابعة وتقييم">
+        <SupportIcon />
       </Sticker>
       <Sfx name="pop" at={18} />
       <Sfx name="pop" at={94} />

@@ -506,20 +506,14 @@ export const ThreeCounter: React.FC<{top: number; times: [number, number, number
   );
 };
 
-/* ============ لوحة ضمان / شكوى (واجهة مرسومة) ============ */
-export const WarrantyPanel: React.FC<{from: number}> = ({from}) => {
-  const frame = useCurrentFrame();
-  const s = spring({frame: frame - from, fps: 30, config: {damping: 12, stiffness: 120}});
-  const press = frame >= from + 26 && frame < from + 34;
-  return (
-    <div style={{...baseText, position: 'absolute', left: 0, right: 0, bottom: 0, background: COLORS.white, borderRadius: '36px 36px 0 0', borderTop: `4px solid ${LINE}`, boxShadow: '0 -14px 30px rgba(47,59,42,0.25)', padding: '26px 24px 30px', transform: `translateY(${(1 - s) * 520}px)`, color: D}}>
-      <div style={{fontSize: 34, marginBottom: 6}}>الغسالة رجعت تكح؟</div>
-      <div style={{fontSize: 24, fontWeight: 400, opacity: 0.8, marginBottom: 18, lineHeight: 1.3}}>ضمان ١٤ يوم: الفني يرجعلك يكشف ببلاش، وقطع الغيار لو اتغيرت بتتدفع</div>
-      <div style={{background: COLORS.primary, color: COLORS.white, borderRadius: 24, padding: '18px 0 22px', textAlign: 'center', fontSize: 38, transform: `scale(${press ? 0.95 : 1})`, boxShadow: press ? `0 0 0 10px rgba(184,73,44,0.25)` : 'none'}}>اطلب زيارة ضمان</div>
-      <div style={{marginTop: 14, textAlign: 'center', fontSize: 28, color: COLORS.primary}}>عندي مشكلة</div>
-    </div>
-  );
-};
+/** أيقونة دعم: فقاعة شات + علامة صح. */
+export const SupportIcon: React.FC = () => (
+  <svg viewBox="0 0 200 200" width="100%" height="100%">
+    <path d="M30 40 Q30 20 52 20 H148 Q170 20 170 40 V120 Q170 140 148 140 H92 L56 176 V140 H52 Q30 140 30 120 Z" fill={COLORS.white} stroke={D} strokeWidth={9} strokeLinejoin="round" />
+    <circle cx={100} cy={80} r={34} fill={COLORS.accent} stroke={D} strokeWidth={7} />
+    <path d="M82 82 L96 96 L120 66" stroke={D} strokeWidth={11} strokeLinecap="round" strokeLinejoin="round" fill="none" />
+  </svg>
+);
 
 export const Bubble: React.FC<{text: string; left: number; top: number; delay: number; to?: number; width?: number; fontSize?: number; variant?: 'light' | 'primary' | 'accent'; tailSide?: 'left' | 'right'}> = ({text, left, top, delay, to = 99999, width = 340, fontSize = 52, variant = 'light', tailSide = 'left'}) => {
   const frame = useCurrentFrame();

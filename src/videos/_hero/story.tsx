@@ -9,10 +9,10 @@ import {PhoneMockup} from '../../components/PhoneMockup';
 import {EndCard} from '../../components/EndCard';
 import {HookTitle} from '../../components/HookTitle';
 import {Burst} from '../../components/Props';
-import {Jitter, ShieldIcon} from '../PickYourPrice/parts';
+import {Jitter} from '../PickYourPrice/parts';
 import {
   Bubble, CategoryGrid, CoughPuff, D, DoorScene, FeatureTag, Foam, FreeBadge, GiftBox, Heba, Hl, IdSelfie, LaundryPile, OffersScreen, Shot,
-  Stamp, Tech, ThoughtCloud, ThoughtTail, ThreeCounter, WarrantyPanel, WashingMachine, WhatsAppCard, arDigits, fade,
+  Stamp, Tech, ThoughtCloud, ThoughtTail, ThreeCounter, WashingMachine, WhatsAppCard, arDigits, fade,
 } from './parts';
 
 const b = (d: number, f: number) => Math.round(d * f);
@@ -243,33 +243,36 @@ const S8: React.FC<{d: number}> = ({d}) => (
   </>
 );
 
-/* ---------------- 9: ضمان ١٤ يوم + شكوى ---------------- */
-const WarrantyFlow: React.FC<{d: number}> = ({d}) => {
+/* ---------------- 9: شكوى + متابعة + تقييم ---------------- */
+const SupportFlow: React.FC<{d: number}> = ({d}) => {
   const f = useCurrentFrame();
-  const sw = b(d, 0.56);
+  const a = b(d, 0.4);
+  const c = b(d, 0.72);
   return (
     <div style={{position: 'absolute', inset: 0, background: COLORS.background}}>
-      <Shot src="screens/tracking.png" opacity={1 - fade(f, sw, sw + 6)} />
-      {f < sw + 6 && <div style={{position: 'absolute', inset: 0, opacity: 1 - fade(f, sw, sw + 6)}}><WarrantyPanel from={b(d, 0.1)} /></div>}
-      <Shot src="screens/complaint.png" pos={1} opacity={fade(f, sw, sw + 6)} />
-      <Hl x={4} y={90} w={92} h={8} from={sw + 10} />
+      <Shot src="screens/complaint.png" pos={1} opacity={1 - fade(f, a, a + 6)} />
+      <Hl x={4} y={90} w={92} h={8} from={b(d, 0.12)} to={a} />
+      <Shot src="screens/tracking.png" opacity={fade(f, a, a + 6) * (1 - fade(f, c, c + 6))} />
+      <Hl x={4} y={23} w={92} h={44} from={a + 10} to={c} />
+      <Shot src="screens/review.png" opacity={fade(f, c, c + 6)} />
+      <Hl x={8} y={58} w={84} h={11} from={c + 10} />
     </div>
   );
 };
 const S9: React.FC<{d: number}> = ({d}) => {
-  const sw = b(d, 0.56);
+  const a = b(d, 0.4);
+  const c = b(d, 0.72);
   return (
     <>
       <Backdrop tone="light" />
-      <FeatureTag text="اطلب زيارة ضمان" top={40} left={0} width={W} fontSize={50} delay={b(d, 0.06)} to={sw} />
-      <FeatureTag text="ابعت شكوى · فريقنا يكلمك واتساب" top={40} left={0} width={W} fontSize={42} delay={sw + 4} />
+      <FeatureTag text="ابعت شكوى · فريقنا يكلمك واتساب" top={40} left={0} width={W} fontSize={42} delay={b(d, 0.04)} to={a} />
+      <FeatureTag text="تابع طلبك خطوة بخطوة" top={40} left={0} width={W} fontSize={50} delay={a + 4} from={a} to={c} />
+      <FeatureTag text="قيّم الفني بعد الشغل" top={40} left={0} width={W} fontSize={50} delay={c + 4} from={c} />
       <WashingMachine left={30} top={190} width={330} state="cough" delay={0} />
       <CoughPuff left={250} top={170} from={4} />
-      <div style={{position: 'absolute', left: 60, top: 640, width: 250, height: 250, zIndex: 6, transform: 'rotate(-6deg)'}}>
-        <ShieldIcon />
-      </div>
+      <WhatsAppCard left={40} top={640} from={b(d, 0.16)} text="فريقنا بيكلمك" sub="على الواتساب" />
       <PhoneMockup width={520} left={520} top={200} delay={0}>
-        <WarrantyFlow d={d} />
+        <SupportFlow d={d} />
       </PhoneMockup>
       <div style={{position: 'absolute', left: -90, top: 860}}>
         <Heba mood="happy" width={420} delay={2} />
@@ -366,7 +369,7 @@ export const WashingStory: React.FC<{lines: Line[]; total: number; bounds: numbe
         </Scene>
       ))}
       <Scene from={bounds[11]} to={bounds[12]}>
-        <EndCard phrase="ضمان ١٤ يوم: الفني يرجعلك يكشف ببلاش، وقطع الغيار لو اتغيرت بتتدفع" phraseSize={46}>
+        <EndCard phrase="متابعة لطلبك · شكوى على الواتساب · تقييم بعد الشغل" phraseSize={46}>
           <div style={{...baseText, position: 'absolute', left: 0, top: 1275, width: W, textAlign: 'center', fontSize: 38, color: D, background: COLORS.accent, padding: '12px 0 16px', borderTop: `6px solid ${D}`, borderBottom: `6px solid ${D}`}}>
             فنيين موثّقين · سعرك قبل ما ييجي · أول طلبين مجانًا
           </div>

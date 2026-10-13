@@ -130,3 +130,8 @@ render.sh
 - **شارة جوجل بلاي:** مرسومة بألوان البراند لأن الشارة الرسمية فيها أزرق. لو محتاجها رسمية، نزّلها من Google Play badges وبدّل `GooglePlayBadge.tsx` بـ `<Img>`.
 - **الخط** بيتحمّل من Google Fonts وقت الرندر، فمحتاج إنترنت.
 - لو Remotion معرفش ينزّل Chrome، استخدم كروم عندك: `BROWSER_EXECUTABLE=/path/to/chrome ./render.sh`.
+
+## الفيديوهين الأساسيين (٦٠ث): TechnicianMain / ConsumerMain
+- فيديو للفني وفيديو للعميل، شاشات حقيقية من `assets/screens` + شخصيات + صوت Hamsa (Samir للراوي والفني، Mariam للعميلة في الخطّاف، speed 1.05).
+- الشارات والمشاهد في `src/videos/shared/PhoneScene.tsx`. الرندر: `npm run render -- TechnicianMain` / `ConsumerMain`.
+- مفيش أي كلام عن ضمان ولا زيارة مجانية. الجملة المعتمدة: "ولو حصل أي مشكلة، بلّغنا من التطبيق".

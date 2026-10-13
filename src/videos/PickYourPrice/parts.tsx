@@ -149,8 +149,7 @@ export const ShieldIcon: React.FC = () => (
   <svg viewBox="0 0 200 200" width="100%" height="100%">
     <path d="M100 10 L176 40 V108 Q176 168 100 192 Q24 168 24 108 V40 Z" fill={COLORS.accent} stroke={D} strokeWidth={9} strokeLinejoin="round" />
     <path d="M100 26 L162 50 V108 Q162 156 100 177 Q38 156 38 108 V50 Z" fill="none" stroke={D} strokeWidth={4} opacity={0.35} />
-    <text x={100} y={112} textAnchor="middle" fontSize={78} fontWeight={700} fill={D} fontFamily="inherit">{ar(14)}</text>
-    <text x={100} y={152} textAnchor="middle" fontSize={34} fontWeight={700} fill={D} fontFamily="inherit">يوم</text>
+    <path d="M62 104 L90 134 L142 70" stroke={D} strokeWidth={20} strokeLinecap="round" strokeLinejoin="round" fill="none" />
   </svg>
 );
 

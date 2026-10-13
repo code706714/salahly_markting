@@ -23,8 +23,7 @@ export const groupTechnicianDuration = 900;
 const S2 = 90; // 3ث
 const S3 = 270; // 9ث
 const S4 = 450; // 15ث
-// كارت الختام اتأخّر من 25ث لـ ~26.7ث عشان جملة الضمان الكاملة (5.6ث) تخلص قبله
-const S5 = 801; // 26.7ث
+const S5 = 750; // 25ث
 
 const Woman: React.FC<React.ComponentProps<typeof Character>> = (p) => {
   const speaking = useSpeaker() === 'woman';
@@ -116,23 +115,23 @@ export const GroupTechnician: React.FC = () => (
         <Burst left={W - 160} top={150} size={150} delay={14} />
 
         {/* الموبايل بيبدّل الشاشة مع كل ميزة (صور التطبيق الحقيقية) */}
-        <Sequence from={5} durationInFrames={78}>
-          <FadeOut at={62}>
+        <Sequence from={14} durationInFrames={90}>
+          <FadeOut at={80}>
             <PhoneMockup src="screens/tech-profile.png" width={470} left={40} top={250} delay={0} highlight={{x: 42, y: 15, w: 32, h: 5, from: 18}} />
           </FadeOut>
         </Sequence>
-        <Sequence from={79} durationInFrames={98}>
-          <FadeOut at={88}>
+        <Sequence from={98} durationInFrames={110}>
+          <FadeOut at={100}>
             <PhoneMockup src="screens/offers.png" width={470} left={40} top={250} delay={0} scrollFrom={0} scrollTo={0.3} scrollDuration={80} scrollDelay={14} />
           </FadeOut>
         </Sequence>
-        <Sequence from={172}>
+        <Sequence from={200}>
           <PhoneMockup src="screens/problem.png" width={470} left={40} top={250} delay={0} scrollFrom={0} scrollTo={0.25} scrollDuration={70} scrollDelay={20} />
         </Sequence>
 
-        <FeatureCard text="فني متسجل ببطاقته" delay={6} top={380} />
-        <FeatureCard text="٥ عروض والسعر قبل ما ييجي" delay={80} top={620} />
-        <FeatureCard text="ضمان 14 يوم:" detail="الفني يرجعلك يكشف ببلاش، وقطع الغيار لو اتغيرت بتتدفع" delay={173} top={860} />
+        <FeatureCard text="فني متسجل ببطاقته" delay={16} top={380} />
+        <FeatureCard text="٥ عروض والسعر قبل ما ييجي" delay={100} top={620} />
+        <FeatureCard text="ولو حصل أي مشكلة" detail="بلّغنا من التطبيق" delay={202} top={860} />
       </FlipIn>
     </Scene>
 

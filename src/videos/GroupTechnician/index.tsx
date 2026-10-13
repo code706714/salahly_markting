@@ -131,7 +131,7 @@ export const GroupTechnician: React.FC = () => (
 
         <FeatureCard text="فني متسجل ببطاقته" delay={16} top={380} />
         <FeatureCard text="٥ عروض والسعر قبل ما ييجي" delay={100} top={620} />
-        <FeatureCard text="ضمان ١٤ يوم:" sub="الفني يرجعلك يكشف ببلاش، وقطع الغيار لو اتغيرت بتتدفع" delay={202} top={840} />
+        <FeatureCard text="ضمان ١٤ يوم:" sub="الفني يرجعلك يكشف ببلاش، وقطع الغيار لو اتغيرت بتتدفع" delay={202} top={885} />
       </FlipIn>
     </Scene>
 

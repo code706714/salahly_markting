@@ -31,7 +31,7 @@ export const Caption: React.FC<{lines: Line[]; bottom?: number}> = ({lines, bott
         style={{
           ...baseText,
           color: COLORS.white,
-          fontSize: 72,
+          fontSize: line.captionSize ?? 72,
           lineHeight: 1.4,
           textAlign: 'center',
           display: 'flex',
@@ -58,6 +58,9 @@ export const Caption: React.FC<{lines: Line[]; bottom?: number}> = ({lines, bott
           );
         })}
       </div>
+      {line.sub ? (
+        <div style={{...baseText, color: COLORS.white, opacity: 0.88, fontSize: 40, fontWeight: 400, lineHeight: 1.3, textAlign: 'center', marginTop: 10}}>{line.sub}</div>
+      ) : null}
     </div>
   );
 };

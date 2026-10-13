@@ -16,6 +16,10 @@ export type RawLine = {
   at?: number;
   /** ما تعرضش الترجمة السفلية للسطر ده */
   noCaption?: boolean;
+  /** سطر صغير تحت الترجمة (مثلاً شرط: "قطع الغيار على الزبون") */
+  sub?: string;
+  /** حجم خط الترجمة بالبكسل لو الجملة طويلة (الافتراضي 72) */
+  captionSize?: number;
 };
 export type Timing = {video: string; synthetic?: boolean; lines: RawLine[]};
 

@@ -59,13 +59,13 @@ export const PickYourPrice: React.FC = () => (
         <Logo size={120} />
         <span style={{...baseText, fontSize: 104, color: COLORS.white, WebkitTextStroke: `9px ${COLORS.dark}`, paintOrder: 'stroke fill', textShadow: `0 8px 0 ${COLORS.dark}`}}>صلحلي</span>
       </div>
-      <FeatureRow top={270} delay={4} text="ضمان ١٤ يوم">
+      <FeatureRow top={250} delay={4} text="ضمان ١٤ يوم">
         <ShieldIcon />
       </FeatureRow>
-      <FeatureRow top={650} delay={34} text="مسجل ببطاقته">
+      <FeatureRow top={580} delay={34} text="مسجل ببطاقته">
         <IdCardIcon />
       </FeatureRow>
-      <FeatureRow top={1030} delay={64} text="كل ٣ شغلانات طلب ببلاش">
+      <FeatureRow top={910} delay={64} text="كل ٣ شغلانات طلب ببلاش">
         <GiftIcon />
       </FeatureRow>
     </Scene>

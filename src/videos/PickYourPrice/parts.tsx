@@ -187,13 +187,13 @@ export const FeatureRow: React.FC<{top: number; delay: number; text: string; chi
       <Sfx name="ding" at={delay + 4} volume={0.55} />
       <div
         style={{
-          ...baseText, position: 'absolute', left: 60, top, width: W - 120, height: 350, boxSizing: 'border-box', display: 'flex', alignItems: 'center', gap: 34, padding: '0 40px',
+          ...baseText, position: 'absolute', left: 60, top, width: W - 120, height: 300, boxSizing: 'border-box', display: 'flex', alignItems: 'center', gap: 34, padding: '0 40px',
           background: 'rgba(247,242,234,0.10)', border: `6px solid ${COLORS.accent}`, borderRadius: 48, color: COLORS.white,
           transform: `translateX(${(1 - pop) * -700}px)`, opacity: Math.min(1, pop * 2.5),
         }}
       >
-        <div style={{width: 260, height: 260, flex: 'none', transform: `scale(${icon}) rotate(${(1 - icon) * -40}deg)`}}>{children}</div>
-        <div style={{fontSize: 80, lineHeight: 1.2, textShadow: `0 6px 0 rgba(0,0,0,0.35)`}}>{text}</div>
+        <div style={{width: 230, height: 230, flex: 'none', transform: `scale(${icon}) rotate(${(1 - icon) * -40}deg)`}}>{children}</div>
+        <div style={{fontSize: 76, lineHeight: 1.2, textShadow: `0 6px 0 rgba(0,0,0,0.35)`}}>{text}</div>
       </div>
     </>
   );

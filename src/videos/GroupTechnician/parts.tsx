@@ -231,7 +231,7 @@ export const CallScreen: React.FC<{failAt: number}> = ({failAt}) => {
 };
 
 /** بطاقة ميزة: علامة ✓ نحاسي + نص. */
-export const FeatureCard: React.FC<{text: string; delay: number; top: number}> = ({text, delay, top}) => {
+export const FeatureCard: React.FC<{text: string; delay: number; top: number; detail?: string}> = ({text, delay, top, detail}) => {
   const frame = useCurrentFrame();
   const pop = useBounce(delay, 9, 170);
   const check = useBounce(delay + 8, 6, 260);
@@ -250,7 +250,10 @@ export const FeatureCard: React.FC<{text: string; delay: number; top: number}> =
           <circle cx={50} cy={50} r={44} fill={COLORS.accent} stroke={COLORS.white} strokeWidth={6} />
           <path d="M28 52 L44 68 L74 32" stroke={D} strokeWidth={13} strokeLinecap="round" strokeLinejoin="round" fill="none" />
         </svg>
-        <span>{text}</span>
+        <span>
+          {text}
+          {detail ? <span style={{display: 'block', fontSize: 38, fontWeight: 400, lineHeight: 1.3, marginTop: 6}}>{detail}</span> : null}
+        </span>
       </div>
       {frame < 0 ? null : null}
     </>
